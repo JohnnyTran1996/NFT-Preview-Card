@@ -1,0 +1,150 @@
+/* Style Guide
+1. Color
+Primary
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+Neutral
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+2. Typography
+Font Size: 18px
+Font Family: [Outfit]
+Font Weight: 300, 400, 600 */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+/* General Rule */
+main .container,
+main .name,
+main .desciption,
+main .price-information,
+main hr,
+main .creator-information {
+  margin-bottom: 2rem;
+}
+
+main,
+main .equilibrium-image,
+main .overlay {
+  border-radius: 1rem;
+}
+
+main .overlay:hover,
+main .name:hover,
+main .creator-information span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+  transition: opacity 0.4s ease-in-out;
+}
+
+main .price-information,
+main .creator-information {
+  display: flex;
+  align-items: center;
+}
+
+main .desciption,
+main .price-information,
+main .creator-information p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+/* Main */
+
+main {
+  width: 30rem;
+  height: 52rem;
+  font-size: 1.8rem;
+  background-color: hsl(216, 50%, 16%);
+
+  padding: 2rem;
+  margin: 4rem auto;
+}
+
+main .container {
+  width: 26rem;
+  height: 26rem;
+
+  position: relative;
+}
+
+main .container .equilibrium-image {
+  width: 100%;
+}
+
+main .container .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+main .container .overlay:hover {
+  opacity: 1;
+  background-color: rgba(0, 255, 247, 0.4);
+}
+
+main .name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: hsl(0, 0%, 100%);
+}
+
+main .price-information {
+  justify-content: space-between;
+}
+
+main .price-information .value {
+  font-weight: 400;
+  color: hsl(178, 100%, 50%);
+}
+
+main .price-information .icon {
+  height: 2rem;
+
+  margin-right: 0.6rem;
+  margin-bottom: -0.4rem;
+}
+
+main hr {
+  border-color: hsl(215, 32%, 27%);
+}
+
+main .creator-information img {
+  width: 12%;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+main .creator-information {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+main .creator-information span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
